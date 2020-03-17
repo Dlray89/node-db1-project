@@ -44,6 +44,8 @@ router.post("/", (req,res) =>{
 })
 
 router.put("/:id", (req,res) => {
+    const changes = req.body
+    //completed
     accountDB("accounts")
     .where({id: req.params.id})
     .update(changes)
